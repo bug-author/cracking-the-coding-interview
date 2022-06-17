@@ -39,6 +39,7 @@ public class isUnique {
     // using space
     public static boolean containsDuplicateChars(String input){
         HashMap<Character, Boolean> map = new HashMap<>();
+
         for (char ch: input.toCharArray()){
             if (map.containsKey(ch)){
                 return true;
