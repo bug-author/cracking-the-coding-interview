@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Chapter 1/chapterOneStringsAndArrays/chapterOneStringsAndArrays.iml" filepath="$PROJECT_DIR$/Chapter 1/chapterOneStringsAndArrays/chapterOneStringsAndArrays.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter 1/.idea/cracking-the-coding-interview.iml" filepath="$PROJECT_DIR$/Chapter 1/.idea/cracking-the-coding-interview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/code.iml" filepath="$PROJECT_DIR$/code/code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cracking-the-coding-interview.iml" filepath="$PROJECT_DIR$/.idea/cracking-the-coding-interview.iml" />
     </modules>
   </component>
 </project>

@@ -1,12 +1,14 @@
+package Chapter1;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class isUnique {
+public class IsUnique {
+
     // similar to leetcode 217 (but for characters instead of numbers)
     // https://leetcode.com/problems/contains-duplicate/
     public static void main(String[] args) {
-        int[] nums = {1,4,2,3,5};
-        boolean ans = containsDuplicateNumbers(nums);
+//        int[] nums = {1,4,2,3,5};
+//        boolean ans = containsDuplicateNumbers(nums);
 //        System.out.println(ans); // false
 
         String test1 = "aString";
@@ -70,3 +72,4 @@ public class isUnique {
         return false;
     }
 }
+
