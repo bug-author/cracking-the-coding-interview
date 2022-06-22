@@ -51,7 +51,7 @@ public class URLify {
 
         for (int i = 0; i < characterArray.length; ) {
             // insert stuff in characterArray
-            while (idx <= trueLength) {
+            if (idx <= trueLength) {
                 char ch = str.charAt(idx);
                 if (ch != ' ') {
                     characterArray[i] = ch;
