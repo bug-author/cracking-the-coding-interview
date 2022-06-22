@@ -55,8 +55,6 @@ public class IsomorphicStrings {
                 else return false;
             }
         }
-
-
         return true;
     }
 }

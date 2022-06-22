@@ -7,7 +7,7 @@ public class CheckPermutation {
     // leetcode 567 Permutation in a String
     public static void main(String[] args) {
 
-        System.out.println(validAnagram("aacc", "ccac"));
+        System.out.println(validAnagram("ab", "eidbaooo"));
 
     }
 
