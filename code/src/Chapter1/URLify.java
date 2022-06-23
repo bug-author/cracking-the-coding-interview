@@ -7,7 +7,7 @@ public class URLify {
         String test = "Mr John Smith    ";
 
 //        System.out.println(urlifyStringBuilder(test));
-        urlify(test);
+        urlifyOptimized(test);
     }
 
     public static String urlifyStringBuilder(String str) {
@@ -43,7 +43,6 @@ public class URLify {
         }
         return -1;
     }
-
     public static void urlify(String str) {
         char[] characterArray = str.toCharArray();
         int trueLength = str.trim().length() - 1;
@@ -68,6 +67,40 @@ public class URLify {
 
 
         System.out.println(characterArray);
+    }
+
+    public static void urlifyOptimized(String s){
+        char[] arr = s.toCharArray();
+
+        // find true length
+        int trueL = 0;
+        for(int i = arr.length - 1 ; i >= 0; i--){
+            if (arr[i] != ' '){
+                trueL = i;
+                break;
+            }
+        }
+
+//        System.out.println(trueL); // 12 correct
+
+        // urlify inplace
+        for(int i=arr.length - 1; i >= 0;){
+            if (arr[trueL] != ' '){
+                arr[i] = arr[trueL];
+                trueL -= 1;
+                i -= 1;
+            }
+            else {
+                arr[i] = '0';
+                arr[i-1] = '2';
+                arr[i-2] = '%';
+                trueL -= 1;
+                i -= 3; // move array 3 times back not trueL
+            }
+        }
+
+        System.out.println(Arrays.toString(arr));
+
     }
 
 }
