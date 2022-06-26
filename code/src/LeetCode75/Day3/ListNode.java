@@ -1,22 +1,22 @@
 package LeetCode75.Day3;
 
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode() {
+    public ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
+    public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
     }
 
-    ListNode convertArrayToLinkedList(int[] arr) {
+    public ListNode convertArrayToLinkedList(int[] arr) {
         ListNode head = new ListNode();
         ListNode d = head;
         for (int number : arr) {
