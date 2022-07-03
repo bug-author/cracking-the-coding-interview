@@ -1,0 +1,5 @@
+# passing variable in recursive function call -> variable is same throughout
+
+# same throughout since all function calls are referencing to same object
+
+# creating variable in recursive function call -> new variable unrelated to different recursive calls
