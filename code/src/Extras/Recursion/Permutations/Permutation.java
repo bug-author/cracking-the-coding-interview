@@ -8,9 +8,9 @@ public class Permutation {
     public static void main(String[] args) {
 //        String test = "a";
 //        System.out.println(test.substring(0,1));
-//        permutation("", "abc");
+        permutation("", "abc");
 //        System.out.println(permutationRet("", "abc"));
-        System.out.println(permutationCount("", "abc"));
+//        System.out.println(permutationCount("", "abc"));
     }
 
     static void permutation(String p, String up) {
