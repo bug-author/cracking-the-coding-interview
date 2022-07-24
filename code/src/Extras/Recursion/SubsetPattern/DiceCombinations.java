@@ -5,17 +5,19 @@ import java.util.List;
 
 public class DiceCombinations {
     public static void main(String[] args) {
-        int n = 30;
-        int k = 30;
-        int target = 500;
+        int n = 2;
+        int k = 6;
+        int target = 7;
         List<String> l = new ArrayList<>();
         diceCombinations("",n,k,target, l);
         System.out.println(l.size() % (1000000000 + 7));
+//        System.out.println(l);
     }
 
     static void diceCombinations(String p, int n, int k, int target, List<String> ans){
         // base condition
         if(target == 0){
+            System.out.println(p);
             if(p.length() > n){
                 return;
             }
