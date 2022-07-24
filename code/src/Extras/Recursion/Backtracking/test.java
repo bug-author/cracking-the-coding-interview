@@ -1,4 +1,4 @@
-package Extras.Recursion.Maze;
+package Extras.Recursion.Backtracking;
 
 public class test {
     public static void main(String[] args) {
