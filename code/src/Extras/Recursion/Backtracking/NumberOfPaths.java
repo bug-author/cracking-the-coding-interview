@@ -3,14 +3,14 @@ package Extras.Recursion.Backtracking;
 
 public class NumberOfPaths {
     public static void main(String[] args) {
-//        System.out.println(numPaths(3, 3));
+        System.out.println(numPaths(3, 3));
 //        printPaths("", 3, 3);
         boolean[][] maze = {
                 {true, true, true},
                 {true, false, true},
                 {true, true, true}
         };
-        pathWithObstacle("", maze, 0, 0);
+//        pathWithObstacle("", maze, 0, 0);
     }
 
     static int numPaths(int row, int col) {

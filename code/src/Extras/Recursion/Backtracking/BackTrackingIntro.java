@@ -1,5 +1,7 @@
 package Extras.Recursion.Backtracking;
 
+import java.util.Arrays;
+
 public class BackTrackingIntro {
     /*
      * for the same maze problem, what if we want to move up and left as well
@@ -24,7 +26,13 @@ public class BackTrackingIntro {
                 {true, true, true},
                 {true, true, true}
         };
-        backtrackMaze("", maze, 0, 0);
+
+        int[][] path = {
+                {0, 0, 0},
+                {0, 0, 0},
+                {0, 0, 0},
+        };
+        backtrackPrintPath("", maze, 0, 0, path, 1);
     }
 
     static void backtrackMaze(String p, boolean[][] maze, int r, int c) {
@@ -60,5 +68,60 @@ public class BackTrackingIntro {
         // by changing the changes made by function
         maze[r][c] = true;
 
+    }
+
+    static void backtrackPrintPath(String p, boolean[][] maze, int row, int col, int[][] path, int step) {
+        // take step variable
+        // update path array
+        // print in base condition
+        // backtrack
+
+        // base condition
+        if (row == maze.length - 1 && col == maze[0].length - 1) {
+            System.out.println(p);
+            // last step will also be included
+            path[row][col] = step;
+            for (int i = 0; i < path.length; i++) {
+                for (int j = 0; j < path[0].length; j++) {
+                    System.out.print(path[i][j] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println("---------------------------------------");
+            return;
+        }
+
+        if (!maze[row][col]) {
+            return;
+        }
+
+        // backtracking init
+        maze[row][col] = false;
+
+        //
+        path[row][col] = step;
+
+        if (row < maze.length - 1) {
+            backtrackPrintPath(p + "D", maze, row + 1, col, path, step + 1);
+        }
+
+        if (col < maze[0].length - 1) {
+            backtrackPrintPath(p + "R", maze, row, col + 1, path, step + 1);
+        }
+
+        if (col > 1) {
+            backtrackPrintPath(p + "L", maze, row, col - 1, path, step + 1);
+        }
+
+        if (row > 1) {
+            backtrackPrintPath(p + "U", maze, row - 1, col, path, step + 1);
+        }
+
+
+        // backtracking end
+        maze[row][col] = true;
+
+        //
+        path[row][col] = 0;
     }
 }
